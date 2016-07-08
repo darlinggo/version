@@ -37,6 +37,7 @@ var (
 	Handler = http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		contentType := goautoneg.Negotiate(r.Header.Get("Accept"), []string{"application/json"})
 		if contentType == "application/json" {
+			w.Header().Set("Content-Type", "application/json")
 			w.Write(jsonOutput)
 			return
 		}
