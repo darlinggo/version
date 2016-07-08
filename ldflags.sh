@@ -4,7 +4,7 @@ gitbranch=$(git rev-parse --abbrev-ref HEAD)
 now=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
 VERSION=${VERSION:-$githash}
 TAG=${TAG:-$gittag}
-BRANCH=${BRANCH:-$branch}
+BRANCH=${BRANCH:-$gitbranch}
 TIMESTAMP=${TIMESTAMP:-$now}
 PACKAGE=darlinggo.co/version
 if [ ! -z $PACKAGE_PREFIX ]; then
