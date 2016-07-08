@@ -71,11 +71,22 @@ if err != nil {
 }
 ```
 
-The version will be output in the following format:
+The version will be, by default, output in the following format:
 
 ```
 VERSION_HASH="{YOUR HASH HERE}"
 VERSION_TAG="{YOUR TAG HERE}"
 VERSION_BRANCH="{YOUR BRANCH HERE}"
 VERSION_TIME="{YOUR TIMESTAMP HERE}"
+```
+
+If the Accept header includes "application/json", however, the output will be in the following format:
+
+```json
+{
+	"hash": "{YOUR HASH HERE}",
+	"tag": "{YOUR TAG HERE}",
+	"branch": "{YOUR BRANCH HERE}",
+	"timestamp": "{YOUR TIMESTAMP HERE}"
+}
 ```
