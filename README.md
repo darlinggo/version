@@ -21,15 +21,27 @@ Obviously, that gets annoying to type out every time you build, so we made it a 
 
 ```
 $GOPATH/src/darlinggo.co/version/ldflags.sh
-go build -ldflags $LDFLAGS .
+go build -ldflags ${LDFLAGS} .
 ```
 
 Or you can include it in your own shell script:
 
 ```sh
 source $GOPATH/src/darlinggo.co/version/ldflags.sh
-go build -ldflags $LDFLAGS .
+go build -ldflags ${LDFLAGS} .
 ```
+
+### Using with vendoring
+
+If you vendor this dependency (and you should!) you need to tell the `ldflags.sh` script where to look, unfortunately, because your package's import path becomes part of its import path. Fortunately, you can do this with the `PACKAGE_PREFIX` variable:
+
+```sh
+export PACKAGE_PREFIX=my/package/import # e.g., darlinggo.co/version
+source vendor/darlinggo.co/version/ldflags.sh
+go build -ldflags "${LDFLAGS}" .
+```
+
+Note that we'll automatically include the vendor part if you have a `PACKAGE_PREFIX` set, so you don't have to include that.
 
 ### Customising for non-Git versioning
 
