@@ -1,2 +1,2 @@
-bitbucket.org/ww/goautoneg v0.0.0-20120707110453-75cd24fc2f2c h1:t+Ra932MCC0eeyD/vigXqMbZTzgZjd4JOfBJWC6VSMI=
-bitbucket.org/ww/goautoneg v0.0.0-20120707110453-75cd24fc2f2c/go.mod h1:1vhO7Mn/FZMgOgDVGLy5X1mE6rq1HbkBdkF/yj8zkcg=
+github.com/adjust/goautoneg v0.0.0-20150426214442-d788f35a0315 h1:zje9aPr1kQ5nKwjO5MC0S/jehRtNrjfYuLfFRWZH6kY=
+github.com/adjust/goautoneg v0.0.0-20150426214442-d788f35a0315/go.mod h1:4U522XvlkqOY2AVBUM7ISHODDb6tdB+KAXfGaBDsWts=

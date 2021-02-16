@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"bitbucket.org/ww/goautoneg"
+	"github.com/adjust/goautoneg"
 )
 
 func init() {
